@@ -1,0 +1,26 @@
+API REST Conectada ao Amazon RDS com Java
+
+Uma API é dita Restful se ela segue o padrão REST,
+ou então, o modelo de maturidade de Richardson. Para isso, utilizamos nesta API básica módulos como: spring web e spring Hateoas.
+O spring-web, é um módulo do framework spring, fornece uma séries de métodos e classes com estrutura rest para simplificar a criação de uma API. Enquanto isso,
+o spring-hateoas possibilita a implementação do último nível de maturidade de Richardson. Dessa forma, poderemos aplicar links aos recurso e consequentemente,
+fornecemos um guia para navegabilidade do usuário dentro da API.
+
+Neste projeto foi utilizado a versão 11 do Java.
+
+-> Person
+->PersonController
+->PersonRepository
+
+ApiRest
+->Employee
+->EmployeeController
+->EmployeeRepository
+->EmployeeNotFoundException
+->EmployeeNotFoundAdvice
+
+Hateoas
+->Controllers
+->Repositories
+->Exceptoins
+->Entyties
