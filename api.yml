@@ -1,0 +1,132 @@
+openapi: 3.0.1
+info:
+  title: OpenAPI definition
+  version: v0
+servers:
+  - url: http://localhost:8082
+    description: Generated server url
+paths:
+  /serasaempreendedor/engagement/v1/optin:
+    post:
+      tags:
+        - Optins
+      summary: Create a new campaign with optin
+      operationId: createCampaignWithOptin
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CampaignOptInRequest'
+        required: true
+      responses:
+        '200':
+          description: Successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CampaignOptInResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CampaignOptInResponse'
+        '401':
+          description: Authorization Failed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CampaignOptInResponse'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CampaignOptInResponse'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CampaignOptInResponse'
+        '422':
+          description: A invalid parameter was received
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CampaignOptInResponse'
+        '500':
+          description: An internal server error was throw
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CampaignOptInResponse'
+components:
+  schemas:
+    CampaignOptInRequest:
+      required:
+        - actionAfterEnd
+        - discount
+        - name
+        - personType
+        - productId
+        - reportName
+        - validityIndays
+      type: object
+      properties:
+        name:
+          type: string
+        productId:
+          type: string
+        reportName:
+          type: string
+        personType:
+          type: string
+          enum:
+            - PJ
+            - PF
+        validityIndays:
+          type: integer
+          format: int32
+        actionAfterEnd:
+          type: string
+          enum:
+            - DEFAULT
+            - FORCED
+            - PRE_CLICK
+        discount:
+          $ref: '#/components/schemas/DiscountApiData'
+      description: Campaign data and opt in
+    DiscountApiData:
+      required:
+        - discountPrice
+        - featureName
+        - featureTransaction
+        - productsCodes
+      type: object
+      properties:
+        discountPrice:
+          type: string
+        featureName:
+          type: string
+        featureTransaction:
+          type: string
+        productsCodes:
+          maxItems: 2147483647
+          minItems: 1
+          type: array
+          items:
+            type: string
+    CampaignOptInResponse:
+      type: object
+      properties:
+        messageId:
+          type: string
+        timestamp:
+          type: string
+        status:
+          type: string
+        details:
+          type: string
+        logon:
+          type: string
