@@ -1,0 +1,32 @@
+
+Júnior	- Entendimento de algoritmos e estruturas de dados básicos (listas, filas, pilhas, mapas).
+- Noções de orientação a objetos (encapsulamento, herança, polimorfismo).
+- Conceito de REST e HTTP (métodos, status, headers).
+- Noções de camadas de aplicação (controller, service, repository).
+- Entendimento básico de banco de dados relacional (joins, índices simples, normalização).
+- Noções de versionamento de código e integração contínua.
+- Conhecimento básico sobre testes unitários e mocks.
+Pleno	- Conhecimentos em princípios SOLID
+- Entendimento de concorrência e assíncrono (thread, future, async).
+- Modelagem de domínio (DDD básico).
+- Conhecimento sobre arquitetura de microsserviços e comunicação entre serviços (HTTP, mensageria).
+- Conhecimento de cache, filas e eventos.
+- Capacidade de projetar e consumir APIs com boas práticas.
+- Conhecimento intermediário em padrões de projeto (Factory, Strategy, Observer, etc.).
+- Domínio de testes unitários e de integração.
+Sênior	- Capacidade de questionar auxiliar arquitetura de serviços (monólito, microserviços).
+- Entendimento de escalabilidade e resiliência.
+- Padrões de microserviços e integração (CQRS, Saga, Outbox, Circuit Breaker).
+- Entendimento de idempotência.
+- Entendimento de segurança aplicada (autenticação, autorização, OWASP).
+- Domínio de versionamento de APIs e compatibilidade.
+- Capacidade de mentorar e revisar soluções de outros devs.
+- Conhecimento sobre observabilidade (logs estruturados, métricas, tracing).
+Especialista
+  tudo do senior, mais as de baixo	
+- Capacidade de ajudar arquitetos evoluir arquiteturas de sistemas.
+- Domínio de arquiteturas event-driven (baseada em eventos, uso de schema registry)
+- Visão sistêmica e de plataforma (impacto entre times e domínios).
+- Domínio de técnicas de performance e otimização (latência, throughput, profiling).
+- Definição de contratos entre serviços e padrões de comunicação.
+- Mentoria técnica 
